@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | test1</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1350 height=1500 style="width: 1350px; height: 1500px; background: url('Build/gin.jpg') center / cover"></canvas>
+    <script src="Build/gin.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/gin.data",
+        frameworkUrl: "Build/gin.framework.js",
+        codeUrl: "Build/gin.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "test1",
+        productVersion: "0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
